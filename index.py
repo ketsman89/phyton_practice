@@ -4,8 +4,9 @@ c = (a/((b*0.01)**2))
 print("Ваш ИМТ:", round(c))
 min = 20
 max = 50
+steps = 15
 d = ['=','=','=','=','=','=','=','=','=','=','=','=','=','=','=', ]
-i = round((c - 20)/((max - min)/len(d))) - 1
+i = round((c - min)/((max - min)/len(d))) - 1
 d[i] = "|"
 h = ' '.join(d)
 print(min, h, max)
