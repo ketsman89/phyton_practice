@@ -5,7 +5,7 @@ def check_len(func):
     def wrapper_decorator(*args, **kwargs):
         if len(*args) > 10:
             return "Too many"
-        value = len(*args)
+        value = func(*args, **kwargs)
         value = value/2
         return value    
     return wrapper_decorator
